@@ -5,7 +5,7 @@ version = '1.0'
 
 setup(name='cs.togglecanonical',
       version=version,
-      description="",
+      description="A simple object action to toggle the canonical language fields from an object action",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -15,9 +15,9 @@ setup(name='cs.togglecanonical',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='',
-      author='Plone Foundation',
-      author_email='plone-developers@lists.sourceforge.net',
-      url='http://svn.plone.org/svn/plone/plone.example',
+      author='Mikel Larreategi',
+      author_email='mlarreategi@codesyntax.com',
+      url='http://code.codesyntax.com/private/cs.togglecanonical',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs'],
