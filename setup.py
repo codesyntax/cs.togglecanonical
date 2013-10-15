@@ -5,10 +5,9 @@ version = '1.1'
 
 setup(name='cs.togglecanonical',
       version=version,
-      description="A simple object action to toggle the canonical language fields from an object action",
-      long_description=open("README.txt").read() + "\n" +
+      description="Hide and show canonical language fields in Plone edit form",
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Programming Language :: Python",
@@ -17,7 +16,7 @@ setup(name='cs.togglecanonical',
       keywords='',
       author='Mikel Larreategi',
       author_email='mlarreategi@codesyntax.com',
-      url='http://code.codesyntax.com/private/cs.togglecanonical',
+      url='https://github.com/codesyntax/cs.togglecanonical',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cs'],
@@ -29,12 +28,7 @@ setup(name='cs.togglecanonical',
       ],
       entry_points="""
       # -*- Entry points: -*-
-
-      [distutils.setup_keywords]
-      paster_plugins = setuptools.dist:assert_string_list
-
-      [egg_info.writers]
-      paster_plugins.txt = setuptools.command.egg_info:write_arg
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
-      paster_plugins = ["ZopeSkel"],
       )
