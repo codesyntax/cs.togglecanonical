@@ -5,12 +5,12 @@
   <object name="object" meta_type="CMF Action Category">
 
   <object name="show_original" meta_type="CMF Action" i18n:domain="cs.togglecanonical">
-   <property name="title" i18n:translate="">Toggle canonical</property>
+   <property name="title" i18n:translate="">Show/Hide canonical</property>
    <property name="description" i18n:translate=""></property>
    <property
-      name="url_expr">string:javascript:jq('.canonicalLanguage').toggle()</property>
+      name="url_expr">string:javascript:jq('.canonicalLanguage').toggle();return False;</property>
    <property name="icon_expr"></property>
-   <property name="available_expr">python:member is not None</property>
+   <property name="available_expr">python:context.isTranslation()</property>
    <property name="permissions">
     <element value="Modify portal content"/>
    </property>
